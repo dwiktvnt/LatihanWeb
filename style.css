@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card {
+    display: block;
+    width: 250px;
+    border-radius: 0;
+    box-shadow: 5px 5px 15px rgb(5, 80, 221);
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
+.img-fluid {
+    border-radius: 50%;
+    max-width: 100px;
+    border: 1px solid;
+}
+.card :hover {
+    background: rgb(5, 80, 221;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: #9E9E9E;
+
+}
+
+
+
