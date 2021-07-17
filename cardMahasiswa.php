@@ -13,18 +13,20 @@
 <body>
 
 <div class= "container my-3 py-5 text-center">
-    <div class="row mb-5">
-        <div class="col">
-            <h1>Data Mahasiswa</h1>
-        </div>
-    </div>        
+<div class="row">
+<div class="col-md-12">
+<h1> Biodata Mahasiswa </h1>
+<br>
+</div>
+</div>
+
+<div class="row mb-5">
     <?php
             $sql = mysqli_query($mysqli,"SELECT * from `mahasiswa`");
 
             while($hasil = mysqli_fetch_array($sql)){
             echo "
-            <div class='row mb-5'>
-                <div class='col-md-4'>
+                <div class='col-md-3'>
                     <div class='card'>
                         <div class='card-body'>
                             <img class='banner-image' src='banner.png' style='width: 100%'>
@@ -52,12 +54,17 @@
                                     </div>
                         </div>
                     </div>
-                </div>
-            </div>";    
+                </div>";    
 
         }
         ?>
 </div>
-    
+</div>
+
+<div class="container-fluid">
+<?php
+    include "tabel.php";
+?>
+</div>
 </body>
 </html>
