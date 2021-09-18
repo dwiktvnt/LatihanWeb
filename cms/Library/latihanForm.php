@@ -109,32 +109,17 @@ function buat_imagepicker($label, $nama, $nilai, $lebar = '4')
         </div>';
 }
 
-function tutup_form($link)
+function tutup_form($link, $btnName, $btnName2)
 {
     echo '<div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-outline-primary">
-                        <i class="fa fa-save"></i> Save 
-                    </button>
-                        <a class="btn btn-outline-warning" href="' . $link . '">
-                        <i class="fa fa-ban"></i> Cancel
-                    </a>
-                </div>
-            </div>
-        </form>';
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-primary">
+					<i class="fa fa-save"></i>' . $btnName2 . ' 
+				</button>
+				<a class="btn btn-warning" href="' . $link . '">
+					<i class="fa fa-arrow-left"></i>' . $btnName . '
+				</a>
+			</div>
+		</div>
+	</form>';
 }
-function login($link)
-{
-    echo '<div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-outline-success">
-                        <i class="fa fa-save"></i> Masuk
-                    </button>
-                        <a class="btn btn-outline-primary" href="' . $link . '">
-                        <i class="fa fa-address-card"></i> Register
-                    </a>
-                </div>
-            </div>
-        </form>';
-}
-?>

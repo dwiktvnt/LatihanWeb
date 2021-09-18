@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "../Library/config.php";
 if (isset($_GET['password'])) {
     $pass1 = $_GET['password'];
     $pass2 = $_GET['password2'];
@@ -10,7 +10,7 @@ if (isset($_GET['password'])) {
         $sql = "INSERT INTO `registrasi` ( `nama`, `password`) VALUES ('$nama', '$passMD')";
         $mysqli->query($sql);
 
-        header("location:login.php");
+        header("location: login.php");
     } else {
         echo '<div class="alert alert-warning">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -37,7 +37,7 @@ if (isset($_GET['password'])) {
                     buat_textbox("Username", "nama", "", "10");
                     buat_textbox("Password", "password", "", "10", "password");
                     buat_textbox("Re Password", "password2", "", "10", "password");
-                    tutup_form("#");
+                    tutup_form("login.php", "Save", "Back");
                     ?>
                 </div>
             </div>

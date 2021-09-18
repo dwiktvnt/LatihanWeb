@@ -18,7 +18,7 @@ if (isset($_GET['nama']) and isset($_GET['password'])) {
 
         if ($dataNamaDariDatabase == $dataNamaDariInputUser) {
             if ($dataPassDariDatabase == $dataPassDariInputUser) {
-                header('location:menu.php');
+                header('location:index.php');
             } else {
                 echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -41,11 +41,11 @@ if (isset($_GET['nama']) and isset($_GET['password'])) {
                         <h1>Login</h1>
                     </div>
                     <?php
-                    include "latihanForm.php";
+                    include "../Library/latihanForm.php";
                     buka_form("login.php", 1, "edit");
                     buat_textbox("Username", "nama", "", "10");
                     buat_textbox("Password", "password", "", "10", "password");
-                    login("menu.php", "register.php");
+                    tutup_form("register.php", "Registrasi", "Login");
                     ?>
                 </div>
             </div>
